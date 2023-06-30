@@ -1,4 +1,4 @@
-package sg.edu.np.mad.madpractical;
+package sg.edu.np.mad.week2t04.practical3;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("sg.edu.np.mad.madpractical", appContext.getPackageName());
+        assertEquals("sg.edu.np.mad.week2t04.practical3", appContext.getPackageName());
     }
 }
