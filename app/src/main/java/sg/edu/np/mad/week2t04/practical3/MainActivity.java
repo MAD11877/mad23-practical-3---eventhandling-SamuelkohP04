@@ -1,8 +1,10 @@
 package sg.edu.np.mad.week2t04.practical3;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        makeToolbar();
         // Instantiating buttons and placeholders
         //_________________________________________________________________________________________
         TextView nameHolder = findViewById(R.id.textView);
@@ -86,5 +89,14 @@ public class MainActivity extends AppCompatActivity {
             String follow = "Follow";
             followButton.setText(follow);
         }
+    }
+
+    private void makeToolbar(){
+        //Toolbar
+        //________________________________________________________
+        Toolbar toolbar = findViewById(R.id.mytoolbar);
+        setSupportActionBar(toolbar);
+        // Set the title text color to white
+        toolbar.setTitleTextColor(Color.WHITE);
     }
 }

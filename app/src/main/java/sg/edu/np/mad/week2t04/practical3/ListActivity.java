@@ -1,8 +1,10 @@
 package sg.edu.np.mad.week2t04.practical3;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -18,6 +20,7 @@ public class ListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+        makeToolbar();
 
         ImageView imageView = findViewById(R.id.imageView1);
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +73,15 @@ public class ListActivity extends AppCompatActivity {
         });
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+    }
+
+    private void makeToolbar(){
+        //Toolbar
+        //________________________________________________________
+        Toolbar toolbar = findViewById(R.id.mytoolbar);
+        setSupportActionBar(toolbar);
+        // Set the title text color to white
+        toolbar.setTitleTextColor(Color.WHITE);
     }
 
 }

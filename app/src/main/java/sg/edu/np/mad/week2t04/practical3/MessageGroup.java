@@ -1,9 +1,11 @@
 package sg.edu.np.mad.week2t04.practical3;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +25,8 @@ public class MessageGroup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message_group);
+
+        makeToolbar();
         Button buttonGroup1 = findViewById(R.id.buttonGroup1);
         Button buttonGroup2 = findViewById(R.id.buttonGroup2);
         frameLayout = findViewById(R.id.frameLayout);
@@ -52,5 +56,14 @@ public class MessageGroup extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frameLayout, fragment);
         fragmentTransaction.commit();
+    }
+
+    private void makeToolbar(){
+        //Toolbar
+        //________________________________________________________
+        Toolbar toolbar = findViewById(R.id.mytoolbar);
+        setSupportActionBar(toolbar);
+        // Set the title text color to white
+        toolbar.setTitleTextColor(Color.WHITE);
     }
 }
